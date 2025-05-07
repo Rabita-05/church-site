@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="Css/style.css">
+  <title>Grace Fellowship</title>
+</head>
+<body> 
+  <header>
+    <a href="index.html">
+    <img src="D:\Church\white logo.png" width="100" height="100" alt="Grace Fellowship Logo"></a>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="events.html">Events</a></li>
+    </ul>
+  </header>
+
+  <section class="banner-area">
+    <div class="banner-img">
+      <h2>Welcome to Grace Fellowship!</h2>
+      <h1>God is <span>Almighty</span></h1>
+      <a href="https://www.youtube.com/@gracefellowship-ag6288" class="btn" target="_blank" rel="noopener noreferrer">Join Our Live</a>
+    </div>
+  </section>
+
+  <section class="vision" id="vsn">
+    <h3 class="vsn-title">OUR VISION</h3>
+    <ul class="vsn-list">
+      <li>Follow Christ!</li>
+      <li>Plant Apostolic Centre!</li>
+      <li>Transform Nations!</li>
+    </ul>
+    <h3 class="msn-title">OUR MISSION</h3>
+    <ul class="msn-list">
+      <li>Win!</li>
+      <li>Build!</li>
+      <li>Send!</li>
+    </ul>
+  </section>
+
+  <div id="verse-of-the-day">Loading today's verse...</div>
+
+  <script>
+    fetch('https://beta.ourmanna.com/api/v1/get/?format=text')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('verse-of-the-day').textContent = data;
+      })
+      .catch(() => {
+        document.getElementById('verse-of-the-day').textContent = 'Could not load verse at the moment. Try again later.';
+      });
+  </script>
+
+  <section class="footer">
+    <h3>Follow Us On</h3>
+    <ul class="social-media">
+      <a href="https://www.facebook.com/profile.php?id=100069433535540" target="_blank" rel="noopener noreferrer"><img src="D:\Church\Web\Assets\fb.png" width="50px" height="50px"></a><br>
+      <a href="https://www.youtube.com/@gracefellowship-ag6288" target="_blank" rel="noopener noreferrer"><img src="D:\Church\Web\Assets\yt.png" width="50px" height="50px"></a>
+    </ul>
+  </section>
+
+  <footer>
+    <p><center>&copy; 2024 Grace Fellowship. All rights reserved.</center></p>
+
+</body>
+</html>
