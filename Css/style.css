@@ -1,11 +1,30 @@
+.site-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: #f2f2f2;
     color: #333;
-    font-size: 20px;
+    font-size: 30px;
   }
-  
+
   header {
     background-color: #222;
     padding: 10px 20px;
@@ -35,17 +54,32 @@ body {
   
   .banner-area {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url('../Assets/bg2.jpg') no-repeat center center/cover;
+                url('../Assets/church.jpg') no-repeat center center/cover;
     color: #f2f2f2;
     text-align: center;
     padding: 100px 20px;
     font-size: 50px;
     position: relative;
+    z-index: 1;
   }
   
   .banner-area h1 {
     font-size: 75px;
     margin: 5px 0;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffffff;
+    padding-bottom: 10px;
+  }
+
+  .banner-area h1:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: #ff9800;
+    margin: 10px auto;
   }
   
   .banner-area h1 span {
@@ -66,7 +100,7 @@ body {
   }
   
   .btn:hover {
-    background-color: #e68900;
+    background-color: #462a01;
   }
   
   .vision {
@@ -115,11 +149,197 @@ body {
         font-size: 30px;
     } 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .about-area {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('../Assets/bg2.jpg') no-repeat center center/cover;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 100px 20px;
+    font-size: 50px;
+    position: relative;
+    z-index: 1;
+  }
+    
   .about-area h2 {
-    color: #222;
+    color: #ffffff;
     font-size: 75px;
     text-align: center;
   }
+
+  .about-area h3 {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 28px;
+    color: #d1d1d1;
+    font-weight: normal;
+  }
+
+  .about-area h1 {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #ffd700;
+    padding-bottom: 10px;
+    font-size: 50px;
+  }
+
+  .team {
+    background-color: #f2f2f2;
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .profile {
+    margin-top: 25px;
+  }
+
+  .profile .img-box {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+
+  .profile .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #222;
+  }
+
+  .profile h3 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #444;
+    line-height: 1.6;
+
+  }
+
+  .img-box {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .img-box::after {
+    content: '';
+    opacity: 0;
+    background-color: #222;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  .img-box ul {
+    margin: 0;
+    padding: 20px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  .img-box ul li {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 3px;
+    padding: 7px;
+    display: inline-block;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 50px 20px;
+    background-color: #f2f2f2;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .col-md-3 {
+    flex: 1 1 300px;
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .col-md-3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   .contact-area h2 {
@@ -127,7 +347,42 @@ body {
     font-size: 75px;
     text-align: center;
   }
+  .map-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f2f2f2;
+  }
+  
+  .map-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  }
+    .map-container iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+    }  
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
   .events-area h2 {
     color: #222;
     font-size: 75px;
