@@ -341,9 +341,19 @@ body {
 
 
 
+  .contact-area {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('../Assets/contact-bg.jpg') no-repeat center center/cover;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 100px 20px;
+    font-size: 50px;
+    position: relative;
+    z-index: 1;
+  }
 
   .contact-area h2 {
-    color: #222;
+    color: #ffffff;
     font-size: 75px;
     text-align: center;
   }
