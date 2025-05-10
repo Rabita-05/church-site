@@ -30,18 +30,30 @@
   </section>
 
   <section class="vision" id="vsn">
-    <h3 class="vsn-title"><b>OUR VISION</b></h3>
-    <ul class="vsn-list">
-      <li>Follow Christ!</li>
-      <li>Plant Apostolic Centre!</li>
-      <li>Transform Nations!</li>
-    </ul>
-    <h3 class="msn-title"><b>OUR MISSION</b></h3>
-    <ul class="msn-list">
-      <li>Win!</li>
-      <li>Build!</li>
-      <li>Send!</li>
-    </ul>
+    <div class="box">
+      <div class="vision-box">
+        <div class="slider">
+          <img src="Assets\follow christ.png" class="slide active" />
+          <img src="Assets/plant.png" class="slide" />
+         <img src="Assets/transform.png" class="slide" />
+        </div>
+
+        <h3 class="vsn-title"><b>OUR VISION</b></h3>
+        <ul class="vsn-list">
+        <li>Follow Christ!</li>
+       <li>Plant Apostolic Centre!</li>
+        <li>Transform Nations!</li>
+        </ul>
+    </div>
+      <div class="vision-box">
+        <h3 class="msn-title"><b>OUR MISSION</b></h3>
+        <ul class="msn-list">
+        <li>Win!</li>
+        <li>Build!</li>
+        <li>Send!</li>
+        </ul>
+      </div>
+  </div>
   </section>
 
   <div id="verse-of-the-day">Loading today's verse...</div>
@@ -56,12 +68,24 @@
         document.getElementById('verse-of-the-day').textContent = 'Could not load verse at the moment. Try again later.';
       });
   </script>
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % totalSlides;
+      slides[currentSlide].classList.add('active');
+      }, 2000);
+  </script>
+
 
   <section class="footer">
     <h3>Follow Us On</h3>
     <ul class="social-media">
-      <a href="https://www.facebook.com/profile.php?id=100069433535540" target="_blank" rel="noopener noreferrer"><img src="Assets\fb.png" width="50px" height="50px"></a><br>
-      <a href="https://www.youtube.com/@gracefellowship-ag6288" target="_blank" rel="noopener noreferrer"><img src="Assets\yt.png" width="50px" height="50px"></a>
+      <a href="https://www.facebook.com/profile.php?id=100069433535540"><img src="Assets\fb.png" width="50px" height="50px"></a><br>
+      <a href="https://www.youtube.com/@gracefellowship-ag6288"><img src="Assets\yt.png" width="50px" height="50px"></a>
     </ul>
   </section>
 
