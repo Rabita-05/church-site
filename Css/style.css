@@ -247,6 +247,7 @@ body {
     }
 
 
+
     .card1 img {
       width: 100%;
       height: 350px;
@@ -266,6 +267,68 @@ body {
       text-align: center;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
+
+
+    .card2 {
+      position: relative;
+      width: 100%;
+      max-width: 1920px;
+      height: auto;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+
+    .card2 img {
+      width: 100%;
+      height: 350px;
+      display: block;
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    .card2 .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 100px;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    .card3 {
+      position: relative;
+      width: 100%;
+      max-width: 1920px;
+      height: auto;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+
+    .card3 img {
+      width: 100%;
+      height: 350px;
+      display: block;
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    .card3 .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 100px;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
 
     .drawer {
       display: none;
@@ -290,6 +353,32 @@ body {
     }
 
     .drawer1.active {
+      display: block;
+    }
+
+    .drawer2 {
+      display: none;
+      background: white;
+      padding: 20px;
+      animation: slideDown 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .drawer2.active {
+      display: block;
+    }
+
+    .drawer3 {
+      display: none;
+      background: white;
+      padding: 20px;
+      animation: slideDown 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .drawer3.active {
       display: block;
     }
   

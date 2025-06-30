@@ -29,44 +29,6 @@
     </div>
   </section>
 
-  <!--<section class="vision" id="vsn">
-    <div class="box">
-      <div class="vision-box">
-        <div class="slider">
-          <img src="Assets\follow-christ.png" class="slide active" />
-          <img src="Assets/plant.png" class="slide" />
-         <img src="Assets/transform.png" class="slide" />
-        </div>
-
-        <h3 class="vsn-title"><b>OUR VISION</b></h3>
-        <ul class="vsn-list">
-        <li>Follow Christ!</li>
-       <li>Plant Apostolic Centre!</li>
-        <li>Transform Nations!</li>
-        </ul>
-    </div>
-      <div class="vision-box">
-        <h3 class="msn-title"><b>OUR MISSION</b></h3>
-        <ul class="msn-list">
-        <li>Win!</li>
-        <li>Build!</li>
-        <li>Send!</li>
-        </ul>
-      </div>
-  </div>
-  </section>
-  -->
-
-  <!--<section class="slider-section">
-    <div class="slider">
-      <img src="Assets/slide1.jpg" class="slide active" alt="Slide 1">
-      <img src="Assets/slide2.jpg" class="slide" alt="Slide 2">
-      <img src="Assets/slide3.jpg" class="slide" alt="Slide 3">
-    </div>
-  </section>  -->
-
-
-
   <div class="card" onclick="toggleDrawer(this)">
   <div class="overlay-text">OUR VISION</div>
   <img src="Assets/vision.png" alt="Vision">
@@ -91,16 +53,26 @@
   <h2>SEND</h2>
 </div>
 
-
-<!--<div class="card" onclick="toggleDrawer()">
-  <img src= "Assets\vision.png" alt="Misn">
+<div class="card2" onclick="toggleDrawer2(this)">
+  <div class="overlay-text">Schedule</div>
+  <img src="Assets/schedule.png" alt="Scdle">
 </div>
 
-<div class="drawer" id="drawer">  
-  <h2>WIN</h2>
-  <h2>BUILD</h2>
-  <h2>SEND</h2>
-</div>-->
+<div class="drawer2">
+  <h2>Main Service - Sunday - At 08.30AM</h2>
+  <h2>Fasting Prayer - Wednesday - At 09.00am</h2>                          
+  <h2>Healing Service - Friday - At 10.00pm</h2>
+</div>
+
+<div class="card3" onclick="toggleDrawer3(this)">
+  <div class="overlay-text">Ways to Give</div>
+  <img src="Assets/offering.png" alt="bnk">
+</div>
+
+<div class="drawer3">
+  <h2>#Bank Details here</h2>
+</div>
+
 
 <section class="verse-of-the-day">
     <p id="verse-of-the-day">Loading...</p>
@@ -126,15 +98,26 @@
       slides[currentSlide].classList.add('active');
       }, 2000);
 
-  function toggleDrawer1(card1Element) {
-    const drawer1 = card1Element.nextElementSibling;
-    drawer1.classList.toggle('active');
-  }
-
   function toggleDrawer(cardElement) {
     const drawer = cardElement.nextElementSibling;
     drawer.classList.toggle('active');
   }
+
+    function toggleDrawer1(card1Element) {
+    const drawer1 = card1Element.nextElementSibling;
+    drawer1.classList.toggle('active');
+  }
+
+    function toggleDrawer2(card2Element) {
+    const drawer2 = card2Element.nextElementSibling;
+    drawer2.classList.toggle('active');
+  }
+
+    function toggleDrawer3(card3Element) {
+    const drawer3 = card3Element.nextElementSibling;
+    drawer3.classList.toggle('active');
+  }
+
 </script>
 
 
