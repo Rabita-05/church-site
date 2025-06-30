@@ -29,7 +29,7 @@
     </div>
   </section>
 
-  <section class="vision" id="vsn">
+  <!--<section class="vision" id="vsn">
     <div class="box">
       <div class="vision-box">
         <div class="slider">
@@ -55,8 +55,28 @@
       </div>
   </div>
   </section>
+  -->
+<div class="card" onclick="toggleDrawer()">
+   <div class="overlay-text">OUR VISION</div>
+  <img src= "Assets\vision.png" alt="Vsion">
+</div>
 
-  <div id="verse-of-the-day">Loading today's verse...</div>
+<div class="drawer" id="drawer">  
+  <h2>Follow Christ!</h2>
+  <h2>Plant Apostolic Centers!</h2>
+  <h2>Transform Nations!</h2>
+</div>
+
+<!--<div class="card" onclick="toggleDrawer()">
+  <img src= "Assets\vision.png" alt="Misn">
+</div>
+
+<div class="drawer" id="drawer">  
+  <h2>WIN</h2>
+  <h2>BUILD</h2>
+  <h2>SEND</h2>
+</div>-->
+
 
   <script>
     fetch('https://beta.ourmanna.com/api/v1/get/?format=text')
@@ -68,6 +88,7 @@
         document.getElementById('verse-of-the-day').textContent = 'Could not load verse at the moment. Try again later.';
       });
   </script>
+
   <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
@@ -79,6 +100,13 @@
       slides[currentSlide].classList.add('active');
       }, 2000);
   </script>
+
+  <script>
+  function toggleDrawer() {
+    const drawer = document.getElementById('drawer');
+    drawer.classList.toggle('active');
+  }
+</script>
 
 
   <section class="footer">

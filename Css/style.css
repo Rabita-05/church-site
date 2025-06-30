@@ -244,7 +244,66 @@ body {
         bottom: 0;
         width: 100%;
         font-size: 30px;
-    } 
+    }
+
+    .card {
+      position: relative;
+      width: 100%;
+      max-width: 1920px;
+      height: auto;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+
+    .card img {
+      width: 100%;
+      height: 350px;
+      display: block;
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    .card .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 100px;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    .drawer {
+      display: none;
+      background: white;
+      padding: 20px;
+      animation: slideDown 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .drawer.active {
+      display: block;
+    }
+  
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .content {
+      padding: 20px;
+    }
 
 
 
