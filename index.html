@@ -12,7 +12,7 @@
   <div class="site-wrapper">
   <header>
     <a href="index.html">
-    <img src="Assets\white logo.png" width="100" height="100" alt="Grace Fellowship Logo"></a>
+    <img src="Assets/white logo.png" width="100" height="100" alt="Grace Fellowship Logo"></a>
     <ul class="nav">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -56,28 +56,41 @@
   </div>
   </section>
   -->
-<div class="card" onclick="toggleDrawer()">
+
+  <!--<section class="slider-section">
+    <div class="slider">
+      <img src="Assets/slide1.jpg" class="slide active" alt="Slide 1">
+      <img src="Assets/slide2.jpg" class="slide" alt="Slide 2">
+      <img src="Assets/slide3.jpg" class="slide" alt="Slide 3">
+    </div>
+  </section>  -->
+
+
+
+  <div class="card" onclick="toggleDrawer(this)">
   <div class="overlay-text">OUR VISION</div>
-  <img src= "Assets\vision.png" alt="Vsion">
+  <img src="Assets/vision.png" alt="Vision">
 </div>
 
-<div class="drawer" id="drawer">  
+
+<div class="drawer">
   <h2>Follow Christ!</h2>
   <h2>Plant Apostolic Centers!</h2>
   <h2>Transform Nations!</h2>
 </div>
 
 
-<div class="card" onclick="toggleDrawer()">
+<div class="card1" onclick="toggleDrawer1(this)">
   <div class="overlay-text">OUR MISSION</div>
-  <img src= "Assets\mission.png" alt="Vsion">
+  <img src="Assets/mission.png" alt="Mission">
 </div>
 
-<div class="drawer" id="drawer">  
+<div class="drawer">
   <h2>WIN</h2>
-  <h2>BUILD</h2>
+  <h2>BUILD</h2>                          
   <h2>SEND</h2>
 </div>
+
 
 <!--<div class="card" onclick="toggleDrawer()">
   <img src= "Assets\vision.png" alt="Misn">
@@ -89,6 +102,10 @@
   <h2>SEND</h2>
 </div>-->
 
+<section class="verse-of-the-day">
+    <h2>Verse of the Day</h2>
+    <p id="verse-of-the-day">Loading...</p>
+</section>
 
   <script>
     fetch('https://beta.ourmanna.com/api/v1/get/?format=text')
@@ -99,9 +116,7 @@
       .catch(() => {
         document.getElementById('verse-of-the-day').textContent = 'Could not load verse at the moment. Try again later.';
       });
-  </script>
 
-  <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
@@ -111,27 +126,29 @@
       currentSlide = (currentSlide + 1) % totalSlides;
       slides[currentSlide].classList.add('active');
       }, 2000);
-  </script>
 
-  <script>
-  function toggleDrawer() {
-    const drawer = document.getElementById('drawer');
+  function toggleDrawer1(card1Element) {
+    const drawer = card1Element.nextElementSibling;
+    drawer.classList.toggle('active');
+  }
+
+  function toggleDrawer(cardElement) {
+    const drawer = cardElement.nextElementSibling;
     drawer.classList.toggle('active');
   }
 </script>
 
 
-  <section class="footer">
+  <footer class="footer">
     <h3>Follow Us On</h3>
     <ul class="social-media">
       <a href="https://www.facebook.com/profile.php?id=100069433535540"><img src="Assets\fb.png" width="50px" height="50px"></a><br>
       <a href="https://www.youtube.com/@gracefellowship-ag6288"><img src="Assets\yt.png" width="50px" height="50px"></a>
     </ul>
-  </section>
 
-  <footer>
-    <p><center>&copy; 2025 Grace Fellowship. All rights reserved.</center></p>
-    </footer>    
+
+    <p>&copy; 2025 Grace Fellowship. All rights reserved.</p>
+  </footer>    
   </div>
 </body>
 </html>
