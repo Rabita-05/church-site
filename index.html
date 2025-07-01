@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Css/style.css">
   <title>Grace Fellowship</title>
 </head>
@@ -78,6 +78,18 @@
     <p id="verse-of-the-day">Loading...</p>
 </section>
 
+
+    <footer class="footer">
+      <h3>Follow Us On</h3>
+      <ul class="social-media">
+        <a href="https://www.facebook.com/profile.php?id=100069433535540"><img src="Assets\fb.png" width="50px" height="50px"></a><br>
+        <a href="https://www.youtube.com/@gracefellowship-ag6288"><img src="Assets\yt.png" width="50px" height="50px"></a>
+      </ul>
+
+
+      <p>&copy; 2025 Grace Fellowship. All rights reserved.</p>
+    </footer>
+
   <script>
     fetch('https://beta.ourmanna.com/api/v1/get/?format=text')
       .then(res => res.text())
@@ -98,39 +110,27 @@
       slides[currentSlide].classList.add('active');
       }, 2000);
 
-  function toggleDrawer(cardElement) {
+    function toggleDrawer(cardElement) {
     const drawer = cardElement.nextElementSibling;
     drawer.classList.toggle('active');
-  }
+    }
 
     function toggleDrawer1(card1Element) {
     const drawer1 = card1Element.nextElementSibling;
     drawer1.classList.toggle('active');
-  }
+    }
 
     function toggleDrawer2(card2Element) {
     const drawer2 = card2Element.nextElementSibling;
     drawer2.classList.toggle('active');
-  }
+    }
 
     function toggleDrawer3(card3Element) {
     const drawer3 = card3Element.nextElementSibling;
     drawer3.classList.toggle('active');
-  }
-
+    }
 </script>
-
-
-  <footer class="footer">
-    <h3>Follow Us On</h3>
-    <ul class="social-media">
-      <a href="https://www.facebook.com/profile.php?id=100069433535540"><img src="Assets\fb.png" width="50px" height="50px"></a><br>
-      <a href="https://www.youtube.com/@gracefellowship-ag6288"><img src="Assets\yt.png" width="50px" height="50px"></a>
-    </ul>
-
-
-    <p>&copy; 2025 Grace Fellowship. All rights reserved.</p>
-  </footer>    
-  </div>
 </body>
 </html>
+
+
